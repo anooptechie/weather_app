@@ -40,6 +40,20 @@
 
     </div>
 
-    
+    <script>
+        const apiKey = "ac4858989e9c08a3227db03fdf40d995";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=new york&units=metric";
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + `&appid=${apiKey}`)
+            var data = await response.json();
+
+            console.log(data);
+        }
+
+        checkWeather();
+        
+
+    </script>
 </body>
 </html>
